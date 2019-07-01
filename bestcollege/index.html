@@ -626,11 +626,12 @@
     -->
 	<!--================ End Events Area =================-->
 
+    
     <!-- submission form-->
     
         <div class="container">
 
-        <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+        <form name="submit-to-google-sheet" class="well form-horizontal"  id="contact_form">
     <fieldset>
 
     <!-- Form Name -->
@@ -641,7 +642,7 @@
         <div class="col-md-4 selectContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                <select name="department" class="form-control selectpicker">
+                <select name="gender" class="form-control selectpicker">
                     <option value="">Select</option>
                     <option>Male</option>
                     <option>Female</option>
@@ -656,7 +657,7 @@
         <div class="col-md-4 selectContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                <select name="department" class="form-control selectpicker">
+                <select name="ethnicity" class="form-control selectpicker">
                     <option value="">Select</option>
                     <option>White</option>
                     <option>Black</option>
@@ -674,7 +675,7 @@
         <div class="col-md-4 selectContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                <select name="department" class="form-control selectpicker">
+                <select name="income" class="form-control selectpicker">
                     <option value="">Select</option>
                     <option>Less than $30k</option>
                     <option>$30k-$48k</option>
@@ -691,7 +692,7 @@
         <div class="col-md-4 selectContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                <select name="department" class="form-control selectpicker">
+                <select name="state" class="form-control selectpicker">
                     <option value="">Select</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
@@ -754,7 +755,7 @@
         <div class="col-md-4 selectContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                <select name="department" class="form-control selectpicker">
+                <select name="sat" class="form-control selectpicker">
                     <option value="">Select</option>
                     <option>Less than 800</option>
                     <option>800-1000</option>
@@ -764,12 +765,12 @@
                 </select>
             </div>
         </div>
-    </div>
+    </div>   
     
     <label class="col-md-4 control-label">Select if anything applies to you</label>    
     <div class="form-check">
         <div class="col-md-4 form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <input name="1st" class="form-check-input" type="checkbox" value="true" id="defaultCheck1">
           <label class="col-md-4" class="form-check-label" for="defaultCheck1">
             1st Gen
           </label>
@@ -777,7 +778,7 @@
     </div>
     <div class="form-check">
         <div class="col-md-4 form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <input name="24+" class="form-check-input" type="checkbox" value="true" id="defaultCheck1">
           <label class="col-md-4" class="form-check-label" for="defaultCheck1">
             24+ y/o
           </label>
@@ -785,13 +786,13 @@
     </div>
     <div class="form-check">
         <div class="col-md-4 form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <input name="vet" class="form-check-input" type="checkbox" value="true" id="defaultCheck1">
           <label class="col-md-4" class="form-check-label" for="defaultCheck1">
             Veteran
           </label>
         </div>
-    </div>
-
+    </div>    
+        
     <!-- Button -->
     <div class="form-group">
       <label class="col-md-4 control-label"></label>
@@ -803,9 +804,13 @@
     </fieldset>
     </form>
     </div>
+    
+
     <!-- /.container -->
     
+    
     <!-- end of submission form-->
+    
     
 	<!--================ Start footer Area  =================-->
 	<footer class="footer-area section_gap">
@@ -895,6 +900,19 @@
 	<script src="js/jquery.ajaxchimp.min.js"></script>
 	<script src="vendors/counter-up/jquery.counterup.js"></script>
 	<script src="js/mail-script.js"></script>
+    
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxn8VgOoy7uYubU89mSb0OVpfC0fCCfrEh0WDZjHCSz8MKciwk/exec'
+      const form = document.forms['submit-to-google-sheet']
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => console.log('Success!', response))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+    
 </body>
 
 </html>
