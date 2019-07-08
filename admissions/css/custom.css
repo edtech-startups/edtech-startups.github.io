@@ -63,3 +63,9 @@ section.pricing {
     opacity: 1;
   }
 }
+
+.payment
+{
+    display: none;
+    color: red;
+}
