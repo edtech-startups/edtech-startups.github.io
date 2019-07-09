@@ -26,6 +26,76 @@
       
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/46421073c0.js"></script>
+      
+    <!-- ANALYTICS START -->  
+    <!-- Hotjar Tracking Code for https://edtech-startups.github.io/admissions/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:1395555,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+      
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142309756-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-142309756-3');
+    </script>
+
+    <script type="text/javascript">
+      (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+      ;r.type="text/javascript"
+      ;r.integrity="sha384-d/yhnowERvm+7eCU79T/bYjOiMmq4F11ElWYLmt0ktvYEVgqLDazh4+gW9CKMpYW"
+      ;r.crossOrigin="anonymous";r.async=true
+      ;r.src="https://cdn.amplitude.com/libs/amplitude-5.2.2-min.gz.js"
+      ;r.onload=function(){if(!e.amplitude.runQueuedFunctions){
+      console.log("[Amplitude] Error: could not load SDK")}}
+      ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+      ;function s(e,t){e.prototype[t]=function(){
+      this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+      var o=function(){this._q=[];return this}
+      ;var a=["add","append","clearAll","prepend","set","setOnce","unset"]
+      ;for(var u=0;u<a.length;u++){s(o,a[u])}n.Identify=o;var c=function(){this._q=[]
+      ;return this}
+      ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+      ;for(var p=0;p<l.length;p++){s(c,l[p])}n.Revenue=c
+      ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
+      ;function v(e){function t(t){e[t]=function(){
+      e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+      for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+      e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+      ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
+      ;e.amplitude=n})(window,document);
+
+      amplitude.getInstance().init("64eb9fa408120cf3544a7b9bccba6e01");
+    </script>
+      
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '467057150731163');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=467057150731163&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    <!-- ANALYTICS END -->  
     
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -62,10 +132,10 @@
 
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li><a href="#features-section" class="nav-link">Features</a></li>
                 <li><a href="#about-section" class="nav-link">About Us</a></li>
                 <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
                 <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#features-section" class="nav-link">Features</a></li>
                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
 
               </ul>
@@ -94,7 +164,7 @@
                 <h1>Get Them Applications 📄 Rolling</h1>
                 <p class="mb-5">Kick back and let us do the annoying job of searching and applying to colleges near and far</p>
                 <div>
-                    <a href="#features-section"><button>Blast 'em! 🚀</button></a>
+                    <a href="#features-section"><button>Get Started</button></a>
                 </div>
               </div>
               
@@ -107,93 +177,6 @@
     </div>  
 
 
-    <div class="site-section bg-light" id="features-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center">
-            <h2 class="section-title mb-3">We’re on a mission. To nail admission</h2>
-          </div>
-        </div>
-        <div class="row align-items-stretch">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-autorenew"></span></span>
-              </div>
-              <div>
-                <h3>College match</h3>
-                <p>Can't figure out the best college for you? No problem. Our experts will happily suggest the ones that you'll like most!</p>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-store_mall_directory"></span></span>
-              </div>
-              <div>
-                <h3>Application essays</h3>
-                <p>Get your admission essay drafts written or edited by professional writers, responsible for thousands of successful applications!</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" >
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-shopping_basket"></span></span>
-              </div>
-              <div>
-                <h3>One-click applications</h3>
-                <p>Applications require an enormous amount of manual work! We make sure your applications are out within seconds, not days!</p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-settings_backup_restore"></span></span>
-              </div>
-              <div>
-                <h3>Interview preparation</h3>
-                <p>Ever wished to talk to an admission officer before the actual interview? Wish granted! Experienced admission officers are waiting for your call!</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-sentiment_satisfied"></span></span>
-              </div>
-              <div>
-                <h3>Scholarship applications</h3>
-                <p>Tuition funding was never easy or fast, so we've joined forces with Scholarship Genie to fix that as well.</p>
-              </div>
-            </div>
-
-            
-          </div>
-          
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
-            <div class="unit-4 d-block">
-              <div class="unit-4-icon mb-3">
-                <span class="icon-wrap"><span class="text-primary icon-power"></span></span>
-              </div>
-              <div>
-                <h3>And more!</h3>
-                <p>Need something else that's not on the list? Check out College Concierge, an amazing personal assistant service made for students!</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
     
     <div class="feature-big">
       <div class="container">
@@ -211,6 +194,9 @@
               <li>You're chillin</li>
               <li>You spent literally 0 minutes so far</li>
             </ul>
+                <div>
+                    <a href="#pricing"><button>Pick 'em! 🚀</button></a>
+                </div>
           </div>
         </div>
 
@@ -225,9 +211,11 @@
               <li>Requires 1 minute of your time</li>
               <li>All your essays and emails are already tailored to each college</li>
               <li>No more copy-pasting time-wasting bs</li> 
-              <li>After that you can continue chillin</li>
-                
+              <li>After that you can continue chillin</li>                
             </ul>
+                <div>
+                    <a href="#pricing"><button>Blast 'em! 🚀</button></a>
+                </div>
           </div>
         </div>
       </div>
@@ -247,6 +235,9 @@
               <li>You're chillin like all the time before</li>
               <li>Adulthood wouldn't be so easy, enjoy life while you can</li>
             </ul>
+                <div>
+                    <a href="#pricing"><button>Get 'em! 🚀</button></a>
+                </div>
           </div>
         </div>
 
@@ -422,6 +413,94 @@
   </div>
 </section>
   
+
+    <div class="site-section bg-light" id="features-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h2 class="section-title mb-3">We’re on a mission. To nail admission</h2>
+          </div>
+        </div>
+        <div class="row align-items-stretch">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+            
+            <div class="unit-4 d-block">
+              <div class="unit-4-icon mb-3">
+                <span class="icon-wrap"><span class="text-primary icon-autorenew"></span></span>
+              </div>
+              <div>
+                <h3>College match</h3>
+                <p>Can't figure out the best college for you? No problem. Our experts will happily suggest the ones that you'll like most!</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+
+            <div class="unit-4 d-block">
+              <div class="unit-4-icon mb-3">
+                <span class="icon-wrap"><span class="text-primary icon-store_mall_directory"></span></span>
+              </div>
+              <div>
+                <h3>Application essays</h3>
+                <p>Get your admission essay drafts written or edited by professional writers, responsible for thousands of successful applications!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" >
+            <div class="unit-4 d-block">
+              <div class="unit-4-icon mb-3">
+                <span class="icon-wrap"><span class="text-primary icon-shopping_basket"></span></span>
+              </div>
+              <div>
+                <h3>One-click applications</h3>
+                <p>Applications require an enormous amount of manual work! We make sure your applications are out within seconds, not days!</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+            <div class="unit-4 d-block">
+              <div class="unit-4-icon mb-3">
+                <span class="icon-wrap"><span class="text-primary icon-settings_backup_restore"></span></span>
+              </div>
+              <div>
+                <h3>Interview preparation</h3>
+                <p>Ever wished to talk to an admission officer before the actual interview? Wish granted! Experienced admission officers are waiting for your call!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+            <div class="unit-4 d-block">
+              <div class="unit-4-icon mb-3">
+                <span class="icon-wrap"><span class="text-primary icon-sentiment_satisfied"></span></span>
+              </div>
+              <div>
+                <h3>Scholarship applications</h3>
+                <p>Tuition funding was never easy or fast, so we've joined forces with Scholarship Genie to fix that as well.</p>
+              </div>
+            </div>
+
+            
+          </div>
+          
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+            <div class="unit-4 d-block">
+              <div class="unit-4-icon mb-3">
+                <span class="icon-wrap"><span class="text-primary icon-power"></span></span>
+              </div>
+              <div>
+                <h3>And more!</h3>
+                <p>Need something else that's not on the list? Check out College Concierge, an amazing personal assistant service made for students!</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
           
 <!--     ебучий аккордеон
 
