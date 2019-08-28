@@ -98,7 +98,11 @@ html {
 }
 
 .bg-bright {
-  background: linear-gradient(to right, #7c40ff, #ee786e) !important; }
+  background: linear-gradient(to right, #7c40ff, #ee786e) !important; 
+
+
+
+}
 
 .white-text {
     color: white !important
