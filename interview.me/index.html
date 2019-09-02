@@ -67,7 +67,10 @@
       ;if(!n._iq.hasOwnProperty(e)){n._iq[e]={_q:[]};v(n._iq[e])}return n._iq[e]}
       ;e.amplitude=n})(window,document);
 
-      amplitude.getInstance().init("591d28d2035beb9a6ea0c8cdd5ad26f7");
+      amplitude.getInstance().init("591d28d2035beb9a6ea0c8cdd5ad26f7"), null, {
+        includeUtm: true,
+        includeReferrer: true,
+        });
     </script>
     
     <!-- Hotjar Tracking Code for https://edtech-startups.github.io/interview.me/ -->
@@ -132,7 +135,7 @@
     <header class="bg-gradient" id="home">
         <div class="container mt-5">
             <h1>Ace your job interview</h1>
-            <p class="tagline">Virtual face-to-face mock interviews with industry experts in a no pressure, stress-free environment simulating a real job interview.</p>
+            <p class="tagline">Virtual face-to-face mock interviews with peers in a no pressure, stress-free environment</p>
             <a href="#cta" class="btn btn-light mt-5">Get Started</a>
         </div>
         <div class="img-holder mt-3"><img src="images/undraw_video_call_kxyp.svg" alt="phone" class="img-fluid big-pic"></div>
@@ -209,13 +212,17 @@
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-md-7 my-auto">
-                    <img src="images/undraw_web_development_w2vv.svg" alt="dual phone" class="img-fluid">
+                    <img src="images/undraw_work_time_lhoj.svg" alt="dual phone" class="img-fluid">
                 </div>
                 <div class="col-md-5 d-flex align-items-center my-auto">
                     <div>
                         <div class="box-icon"><span class="ti-shortcode gradient-fill ti-3x"></span></div>
-                        <h2>Become a code god(dess)</h2>
-                        <p class="mb-4">Python, React, Angular, Node, Vue, C++, C#, R, Ruby, RoR, JavaScript, PHP. <br> We got it all. </p>
+                        <h2>Boost your confidence</h2>
+                        <p class="mb-4">Theoretical knowledge of interview questions isn't enough when you actually face an interview. Too often fear takes over our performance in job interviews.
+                        
+                        <br>
+                        We believe that practice & preparation are crucial to get over your anxieties when attending an interview.
+                        </p>
                         <a href="#" class="btn btn-primary">Get Started</a></div>
                 </div>
             </div>
@@ -232,7 +239,7 @@
                 <div class="col-md-5 d-flex align-items-center my-auto">
                     <div>
                         <div class="box-icon"><span class="ti-palette gradient-fill ti-3x"></span></div>
-                        <h2>Learn best UI/UX practices in practice</h2>
+                        <h2>Put your skills to the test</h2>
                         <p class="mb-4">Learn by doing. Play with design puzzles and challenging games as you learn. Test your skills and explore possibilities. </p>
                         <a href="#" class="btn btn-primary">Read more</a></div>
                 </div>
@@ -255,7 +262,7 @@
                 <div class="col-md-5 d-flex align-items-center my-auto">
                     <div>
                         <div class="box-icon"><span class="ti-heart gradient-fill ti-3x"></span></div>
-                        <h2>Become a data-driven marketer</h2>
+                        <h2>Receive valuable feedback</h2>
                         <p class="mb-4">Data is a powerful marketing tool, but there's more to it than you think. Learn about how your marketing approach should use data in combination with buyer personas and lead generation.</p>
                         <a href="#" class="btn btn-primary">Read more</a></div>
                 </div>
@@ -479,6 +486,7 @@
                                     <label>My name is:</label>
                                     <input name="name" type="text" class="form-control formstyle" required>
                                 </div>
+<!--
                                 <div class="form-group">
                                     <label>I am a:</label>
                                     <select name="speciality" class="form-control selectpicker formstyle" required>
@@ -487,6 +495,11 @@
                                         <option>Marketer</option>
                                         <option>Designer</option>
                                     </select>
+                                </div>
+-->
+                            <div class="form-group">
+                                    <label>I am a:</label>
+                                    <input name="speciality" type="text" class="form-control formstyle" required>
                                 </div>
                                 <div class="form-group">
                                     <label>My biggest challenge is:</label>
@@ -498,7 +511,7 @@
                                 </div>
                                 <br>
                                 
-                                <button onclick="amplitude.getInstance().logEvent('submit-form', {'package': 49});" type="submit" class="btn btn-light">Sign UP</button>
+                                <button onclick="amplitude.getInstance().logEvent('sign-up');" type="submit" class="btn btn-light">Sign UP</button>
                                 <br><br>
                             </form>
 
@@ -570,6 +583,7 @@
           .catch(error => console.error('Error!', error.message));
       })
     </script>
+    <script>amplitude.getInstance().logEvent(window.location.href.split('?')[0].replace('https://', ''));</script>
     
 </body>
 
