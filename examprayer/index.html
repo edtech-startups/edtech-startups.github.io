@@ -103,7 +103,32 @@
               <span class="caption mb-3">Exams soon and you're clueless?</span>
               <h1 class="mb-4">Order a prayer for your success</h1>
 <!--              <p><a href="#" class="text-white py-3 px-4">Order Now</a></p>-->
-            <p><a href="https://api.fondy.eu/s/NspndKMe5" class="btn btn-primary pill text-white px-4">Order Now</a></p>
+                <form class="form-inlin justify-content-center well form-horizontal" name="submit-to-google-sheet" id="contact_form">
+                                <div class="form-group">
+                                    <label class="text-white">My name is:</label>
+                                    <input name="name" type="text" class="form-control formstyle" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-white">My religion is:</label>
+                                    <select name="religion" class="form-control selectpicker formstyle" required>
+                                        <option value=""></option>
+                                        <option>Christianity</option>
+                                        <option>Islam</option>
+                                        <option>Hinduism</option>
+                                        <option>Buddhism</option>
+                                        <option>Judaism</option>
+                                        <option>Pastafarianism</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-white">The exam will take place on:</label>
+                                    <input name="speciality" type="date" class="form-control formstyle" required>
+                                </div>
+                                <br>
+                                <button onclick="amplitude.getInstance().logEvent('sign-up');" type="submit" class="btn btn-primary pill text-white px-4">Order Now</button>
+                                <br><br>
+                            </form>
+<!--            <p><a href="https://api.fondy.eu/s/NspndKMe5" class="btn btn-primary pill text-white px-4">Order Now</a></p>-->
             </div>
           </div>
         </div>
@@ -202,6 +227,19 @@
                 }
             });
     </script>
+      
+    <script>
+      const scriptURL = 'https://hooks.zapier.com/hooks/catch/5352559/o3uxbj8/';
+      const form = document.forms['submit-to-google-sheet'];
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {console.log('Success!', response); window.location.href = 'https://api.fondy.eu/s/NspndKMe5';})
+          .catch(error => console.error('Error!', error.message));
+      })
+    </script>
+      
+    <script>amplitude.getInstance().logEvent(window.location.href.split('?')[0].replace('https://', ''));</script>
 
   </body>
 </html>
